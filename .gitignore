@@ -1,0 +1,33 @@
+# ── AI models (too large for GitHub) ──
+models/*.gguf
+models/*.bin
+
+# ── Python bytecode ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Virtual environment ──
+venv/
+.venv/
+env/
+
+# ── App cache ──
+.analyst_cache/
+
+# ── Runtime folders (kept empty in repo) ──
+data/uploads/*
+data/exports/*
+!data/uploads/.gitkeep
+!data/exports/.gitkeep
+
+# ── Temp / OS files ──
+~$*
+.DS_Store
+Thumbs.db
+*.tmp
+
+# ── Secrets / environment variables ──
+.env
+*.env
