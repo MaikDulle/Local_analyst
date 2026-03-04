@@ -312,8 +312,6 @@ MIT — free to use, modify, and share.
 
 ---
 
-## Questions or feedback?
-
-Open an issue on GitHub or contact [Maik Dulle](https://maikdulle.github.io).
+## AND...
 
 > **Remember:** AI is a tool for interpretation, not calculation. Trust the numbers, question the narrative.
