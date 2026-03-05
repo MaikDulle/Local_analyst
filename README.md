@@ -88,7 +88,7 @@ Upload any business data file and instantly get:
 Python is the engine that powers Local Analyst. Think of it like installing a printer driver — you don't need to understand it, you just need it to be there.
 
 1. Open your browser and go to: **[python.org/downloads](https://www.python.org/downloads/)**
-2. Click the big yellow **"Download Python 3.11.x"** button
+2. Click on 'get the standaline installer for **Python 3.XX.X** - Link
 3. Open the file that downloads
 4. ⚠️ **Before clicking anything else:** look at the bottom of the installer window and **tick the box that says "Add Python to PATH"**  
    *(If you skip this, the setup won't work)*
