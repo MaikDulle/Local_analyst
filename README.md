@@ -68,87 +68,100 @@ Upload any business data file and instantly get:
 
 ---
 
-## Installation — step by step
+# Installation — Getting Local Analyst Running on Your Computer
 
-> This takes about 5–10 minutes. You only do this once.
-
-### Step 1 — Install Python
-
-1. Go to [python.org/downloads](https://www.python.org/downloads/)
-2. Download **Python 3.11** (click the yellow button)
-3. Run the installer
-4. **Important:** On the first screen, check the box that says **"Add Python to PATH"** before clicking Install
-5. Click "Install Now"
-
-To verify it worked, open a terminal (search "Command Prompt" on Windows, "Terminal" on Mac) and type:
-```
-python --version
-```
-You should see something like `Python 3.11.x`. If you get an error, restart your computer and try again.
+> This takes about **10–15 minutes** and you only do it **once**.  
+> You don't need any technical background. Just follow the steps in order.
 
 ---
 
-### Step 2 — Download Local Analyst
+## Before you start — what you'll need
 
-**Option A — If you have Git:**
-```
-git clone https://github.com/MaikDulle/Local_analyst.git
-cd Local_analyst
-```
-
-**Option B — No Git:**
-1. Go to the GitHub page
-2. Click the green **"Code"** button → **"Download ZIP"**
-3. Extract the ZIP to a folder you'll remember (e.g. `Documents/Local_analyst`)
-4. Open a terminal and navigate to that folder:
-   - **Windows:** `cd C:\Users\YourName\Documents\Local_analyst`
-   - **Mac/Linux:** `cd ~/Documents/Local_analyst`
+- A laptop or desktop running **Windows 10/11** or **macOS**
+- An internet connection (only needed during setup)
+- About **3 GB of free disk space**
 
 ---
 
-### Step 3 — Create a virtual environment
+## Step 1 — Install Python
 
-A virtual environment keeps this tool's packages separate from anything else on your computer.
+Python is the engine that powers Local Analyst. Think of it like installing a printer driver — you don't need to understand it, you just need it to be there.
 
-```
-python -m venv venv
-```
-
-Then activate it:
-
-**Windows:**
-```
-venv\Scripts\activate
-```
-
-**Mac / Linux:**
-```
-source venv/bin/activate
-```
-
-> You'll know it worked when you see `(venv)` at the start of your terminal line.
+1. Open your browser and go to: **[python.org/downloads](https://www.python.org/downloads/)**
+2. Click the big yellow **"Download Python 3.11.x"** button
+3. Open the file that downloads
+4. ⚠️ **Before clicking anything else:** look at the bottom of the installer window and **tick the box that says "Add Python to PATH"**  
+   *(If you skip this, the setup won't work)*
+5. Click **"Install Now"** and wait for it to finish
+6. Click **Close**
 
 ---
 
-### Step 4 — Install the required packages
+## Step 2 — Download Local Analyst
 
-```
-pip install -r requirements.txt
-```
-
-This downloads and installs everything automatically. It may take 3–5 minutes depending on your internet speed.
+1. Go to: **[github.com/MaikDulle/Local_analyst](https://github.com/MaikDulle/Local_analyst)**
+2. Click the green **"Code"** button (top right of the file list)
+3. Click **"Download ZIP"**
+4. Once downloaded, **right-click the ZIP file → Extract All** (Windows) or **double-click** it (Mac)
+5. Move the extracted folder somewhere easy to find — for example, your **Desktop** or your **Documents** folder  
+   *(The folder is called `Local_analyst-main` — you can rename it to just `Local_analyst` if you like)*
 
 ---
 
-### Step 5 — Start the app
+## Step 3 — Open a terminal inside the folder
+
+This is the step most people are nervous about. A terminal is just a text box where you give your computer instructions. Here's the easiest way to open one already pointing at the right place:
+
+**On Windows:**
+1. Open the `Local_analyst` folder in File Explorer
+2. Click in the **address bar** at the top (where it shows the folder path)
+3. Type `cmd` and press **Enter**
+4. A black window opens — that's the terminal, and it's already in the right folder ✓
+
+**On Mac:**
+1. Open the `Local_analyst` folder in Finder
+2. Right-click (or Control-click) anywhere inside the folder — **not** on a file
+3. Select **"New Terminal at Folder"**  
+   *(If you don't see this option: go to System Settings → Privacy & Security → Developer Tools and enable Terminal)*
+
+---
+
+## Step 4 — Run the setup (one command, one time)
+
+Copy the line below, paste it into your terminal window, and press **Enter**:
+
+```
+python -m venv venv && venv\Scripts\activate && pip install -r requirements.txt
+```
+
+**On Mac, use this version instead:**
+
+```
+python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+```
+
+This will take **3–8 minutes** — you'll see a lot of text scrolling past. That's normal. Wait until it stops and you see a blinking cursor again.
+
+> 💡 **What is this doing?** It's creating a protected space for Local Analyst's packages (so they don't interfere with anything else on your computer), then downloading everything the app needs to run.
+
+---
+
+## Step 5 — Start the app
+
+Once setup is done, type this into the same terminal and press **Enter**:
 
 ```
 streamlit run app/main.py
 ```
 
-Your browser will open automatically at `http://localhost:8501`. If it doesn't, open your browser manually and go to that address.
+**On Mac:**
+```
+streamlit run app/main.py
+```
 
-> **Every time you want to use the tool:** Open a terminal, navigate to the Local Analyst folder, activate the virtual environment (`venv\Scripts\activate`), then run `streamlit run app/main.py`.
+Your browser will open automatically and show the Local Analyst interface. If it doesn't open by itself, go to your browser and type `http://localhost:8501` in the address bar. Repeat step 5 for opening the app next time.
+
+🎉 **You're done.** Upload a file in the left sidebar and start exploring your data.
 
 ---
 
