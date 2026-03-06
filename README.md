@@ -38,7 +38,7 @@ Upload any business data file and instantly get:
 - **Connect to the internet** — it's fully offline by design
 - **Replace a data scientist** — it highlights patterns, you decide what they mean
 - **Guarantee perfect AI output** — the AI interpretation feature can be wrong; always check the actual numbers
-
+- **Run on a mobile device** — it was developed as a desktop tool
 ---
 
 ## What files can I upload?
@@ -61,7 +61,7 @@ Upload any business data file and instantly get:
 | | Minimum |
 |---|---|
 | Operating system | Windows 10/11, macOS 12+, or Linux |
-| Python | **3.10 or 3.11** (other versions may work but are untested) |
+| Python | **3.10 or 3.11 or higher** |
 | RAM | 4 GB (8 GB recommended, 16 GB if using AI) |
 | Disk space | ~2 GB for the app + ~1 GB if you add the AI model |
 | Internet | Only needed once — to download the tool and packages |
